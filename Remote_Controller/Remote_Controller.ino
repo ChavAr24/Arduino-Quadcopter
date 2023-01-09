@@ -1,9 +1,7 @@
-void setup() {
-  // put your setup code here, to run once:
-
-}
+#include "Pins.h"
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
+  const char text[] = "42069 Recieving";
+  transmitter.write(&text, sizeof(text));
+  delay(1000);
 }

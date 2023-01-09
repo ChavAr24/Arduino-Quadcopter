@@ -1,9 +1,9 @@
-void setup() {
-  // put your setup code here, to run once:
-
-}
+#include "Pins.h"
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
+  if (reciever.available()) {
+    char text[32] = "";
+    reciever.read(&text, sizeof(text));
+    Serial.println(text);
+  }
 }
